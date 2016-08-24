@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Awaken", "Awaken\Awaken.vcxproj", "{36C5C50F-B57F-4D3A-9B21-8C86E910CC6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C5C50F-B57F-4D3A-9B21-8C86E910CC6D}.Debug|x86.ActiveCfg = Debug|Win32
+		{36C5C50F-B57F-4D3A-9B21-8C86E910CC6D}.Debug|x86.Build.0 = Debug|Win32
+		{36C5C50F-B57F-4D3A-9B21-8C86E910CC6D}.Release|x86.ActiveCfg = Release|Win32
+		{36C5C50F-B57F-4D3A-9B21-8C86E910CC6D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
