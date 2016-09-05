@@ -37,7 +37,7 @@
 
 DWORD WINAPI ThreadProc(LPVOID);
 
-int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, LPTSTR, int show)
+int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
   HANDLE thread = NULL;
 
