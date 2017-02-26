@@ -1,7 +1,7 @@
 /*
  *
  * Awaken - Keep your PC awake
- * Copyright 2016 Daniel Sage
+ * Copyright 2017 Daniel Sage
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ BEGIN
             VALUE "FileDescription", "Awaken - Keep your PC awake"
             VALUE "FileVersion", "0.1.1"
             VALUE "InternalName", "Awaken"
-            VALUE "LegalCopyright", "Copyright © 2016 Daniel Sage"
+            VALUE "LegalCopyright", "Copyright © 2017 Daniel Sage"
             VALUE "OriginalFilename", "Awaken.exe"
             VALUE "ProductName", "Awaken - Keep your PC awake"
             VALUE "ProductVersion", "0.1.1"

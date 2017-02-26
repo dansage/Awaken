@@ -1,7 +1,7 @@
 /*
  *
  * Awaken - Keep your PC awake
- * Copyright 2016 Daniel Sage
+ * Copyright 2017 Daniel Sage
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,31 @@
 // Include the Windows API headers
 #include <Windows.h>
 
+DWORD WINAPI ThreadProc(LPVOID);
+
 int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
+{
+  HANDLE thread = NULL;
+
+  // Create the thread that will keep the system awake
+  if ((thread = ::CreateThread(NULL, NULL, ThreadProc, NULL, NULL, NULL)) == NULL)
+  {
+    // Let the user know that we could not start the thread
+    ::MessageBox(NULL, L"Awaken was unable to start properly. Your system will NOT stay awake!", L"Awaken - Keep your PC awake", MB_ICONERROR | MB_OK);
+    return ::GetLastError();
+  }
+
+  // Let the user know that Awaken has started
+  ::MessageBox(NULL, L"Awaken has started - your system will not enter sleep!", L"Awaken - Keep your PC awake", MB_ICONINFORMATION | MB_OK);
+
+  // Wait for the thread to close (hint: never gonna happen)
+  ::WaitForSingleObject(thread, INFINITE);
+
+  // This will never happen.
+  return S_OK;
+}
+
+DWORD WINAPI ThreadProc(LPVOID)
 {
   INPUT input = { 0 };
   MOUSEINPUT mouse = { 0 };
@@ -46,9 +70,6 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
   // Point to the mouse input structure
   input.mi = mouse;
 
-  // Let the user know that Awaken has started
-  ::MessageBox(NULL, L"Awaken has started - your system will not enter sleep!", L"Awaken - Keep your PC awake", MB_ICONINFORMATION | MB_OK);
-
   do
   {
     // Prevent Windows from putting the display/system to sleep
@@ -61,6 +82,6 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
     ::Sleep(30000);
   } while (true);
 
-  // Nothing to see here, quite yet!
+  // This will never happen.
   return S_OK;
 }
