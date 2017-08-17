@@ -3,6 +3,7 @@
 [Rr]elease/
 
 # Excluse user-specific files
+.vs/
 *.user
 *.suo
 
