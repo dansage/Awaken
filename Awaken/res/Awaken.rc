@@ -22,8 +22,8 @@
 IDI_MAIN ICON "Awaken.ico"
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0, 1, 2, 0
- PRODUCTVERSION 0, 1, 2, 0
+ FILEVERSION 0, 1, 3, 0
+ PRODUCTVERSION 0, 1, 3, 0
  FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
 #ifdef _DEBUG
  FILEFLAGS VS_FF_DEBUG
@@ -40,12 +40,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Daniel Sage"
             VALUE "FileDescription", "Awaken - Keep your PC awake"
-            VALUE "FileVersion", "0.1.2"
+            VALUE "FileVersion", "0.1.3"
             VALUE "InternalName", "Awaken"
             VALUE "LegalCopyright", "Copyright © 2017 Daniel Sage"
             VALUE "OriginalFilename", "Awaken.exe"
             VALUE "ProductName", "Awaken - Keep your PC awake"
-            VALUE "ProductVersion", "0.1.2"
+            VALUE "ProductVersion", "0.1.3"
         END
     END
     BLOCK "VarFileInfo"
